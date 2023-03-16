@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Entypo } from '@expo/vector-icons';
+
 export default function MemoItem() {
   return (
     <View style={styles.container}>
@@ -11,8 +13,8 @@ export default function MemoItem() {
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <View>
-            <Text style={styles.buttom}>X</Text>
+          <View style={styles.buttom}>
+            <Entypo name="cross" size={24} color="#b0b0b0" />
           </View>
         </View>
 
@@ -22,8 +24,8 @@ export default function MemoItem() {
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <View>
-            <Text style={styles.buttom}>X</Text>
+          <View style={styles.buttom}>
+            <Entypo name="cross" size={24} color="#b0b0b0" />
           </View>
         </View>
 
@@ -33,8 +35,8 @@ export default function MemoItem() {
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <View>
-            <Text style={styles.buttom}>X</Text>
+          <View style={styles.buttom}>
+            <Entypo name="cross" size={24} color="#b0b0b0" />
           </View>
         </View>
 
@@ -44,8 +46,8 @@ export default function MemoItem() {
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <View>
-            <Text style={styles.buttom}>X</Text>
+          <View style={styles.buttom}>
+            <Entypo name="cross" size={24} color="#b0b0b0" />
           </View>
         </View>
     </View>

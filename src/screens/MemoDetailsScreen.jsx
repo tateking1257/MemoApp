@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ScrollView } from "react-native";
 
 import AppBar from "../components/AppBar";
 import CircleButtom from "../components/CircleButtom";
+ 
 
 export default function MemoDetailsScreen() {
     return (
@@ -19,7 +20,7 @@ export default function MemoDetailsScreen() {
                     また、サイト集客、及びサイト訪問者のサービス向上を目的に、各種コンテンツを取り揃えております。
                 </Text>
             </ScrollView >
-            <CircleButtom style={{ top:150, bottom:'auto' }}>=</CircleButtom>
+            <CircleButtom style={{ top:145, bottom:'auto' }} name="pencil" />
         </View>
     );
 }

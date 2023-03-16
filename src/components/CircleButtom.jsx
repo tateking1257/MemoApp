@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { string, shape } from 'prop-types';
+import { Entypo } from '@expo/vector-icons'; 
 
 export default function CircleButtom(props) {
-    const { children, style } = props;
+    const { style, name } = props;
     return (
         <View style={[styles.circleButtom, style]}>
-            <Text style={styles.circleButtomLabel}>{ children }</Text>
+            <Entypo name={name} size={40} color="white" />
         </View> 
     );
 }
 
 CircleButtom.propTypes = {
-    children: string.isRequired,
     style: shape(),
+    name: string.isRequired,
 }
 
 CircleButtom.defaultProps = {

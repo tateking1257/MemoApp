@@ -10,3 +10,5 @@ export default function App() {
 
 // npm install -g expo-cli@5.5.1
 // expo --version
+
+// https://icons.expo.fyi/
