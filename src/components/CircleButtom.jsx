@@ -1,24 +1,26 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { string, shape } from 'prop-types';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { string, shape, func } from 'prop-types';
 import { Entypo } from '@expo/vector-icons'; 
 
 export default function CircleButtom(props) {
-    const { style, name } = props;
+    const { style, name, onPress } = props;
     return (
-        <View style={[styles.circleButtom, style]}>
+        <TouchableOpacity style={[styles.circleButtom, style]} onPress={onPress}>
             <Entypo name={name} size={40} color="white" />
-        </View> 
+        </TouchableOpacity> 
     );
 }
 
 CircleButtom.propTypes = {
     style: shape(),
     name: string.isRequired,
+    onPress: func,
 }
 
 CircleButtom.defaultProps = {
     style: null,
+    onPress: null,
 };
 
 const styles = StyleSheet.create({

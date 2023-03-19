@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TextInput, KeyboardAvoidingView } from "react-native";
+import { View, StyleSheet, TextInput,KeyboardAvoidingView, Alert } from "react-native";
 
 import AppBar from "../components/AppBar";
 import CircleButtom from "../components/CircleButtom";
@@ -11,7 +11,7 @@ export default function MemoEditScreen(){
             <View style={styles.inputContainer}>
                 <TextInput value="買い物" multiline style={styles.inputText} />
             </View >
-            <CircleButtom name="check" />
+            <CircleButtom name="check" onPress={()=> { Alert.alert('Pressed!');} }/>
         </KeyboardAvoidingView>
     );
 }
