@@ -1,55 +1,64 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
 
 import { Entypo } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MemoItem() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
-        <View style={styles.memoList}>
+        <TouchableOpacity 
+          style={styles.memoList}
+          onPress={()=>{navigation.navigate('MemoDetails');}}
+        >
          <View style={styles.memoListItem}>
             <Text style={styles.memoListItemTitle}>買い物リスト</Text>
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <TouchableOpacity style={styles.buttom}>
+          <TouchableOpacity 
+            style={styles.buttom}
+            onPress={()=> {Alert.alert('Are you sure?');}}
+          >
             <Entypo name="cross" size={24} color="#b0b0b0" />
           </TouchableOpacity>
-        </View>
+        </TouchableOpacity>
 
-        <View style={styles.memoList}>
+        <TouchableOpacity 
+          style={styles.memoList}
+          onPress={()=>{navigation.navigate('MemoDetails');}}
+        >
          <View style={styles.memoListItem}>
             <Text style={styles.memoListItemTitle}>買い物リスト</Text>
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <TouchableOpacity style={styles.buttom}>
+          <TouchableOpacity 
+            style={styles.buttom}
+            onPress={()=> {Alert.alert('Are you sure?');}}
+          >
             <Entypo name="cross" size={24} color="#b0b0b0" />
           </TouchableOpacity>
-        </View>
+        </TouchableOpacity>
 
-        <View style={styles.memoList}>
+        <TouchableOpacity 
+          style={styles.memoList}
+          onPress={()=>{navigation.navigate('MemoDetails');}}
+        >
          <View style={styles.memoListItem}>
             <Text style={styles.memoListItemTitle}>買い物リスト</Text>
             <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
           </View>
           
-          <TouchableOpacity style={styles.buttom}>
+          <TouchableOpacity 
+            style={styles.buttom}
+            onPress={()=> {Alert.alert('Are you sure?');}}
+          >
             <Entypo name="cross" size={24} color="#b0b0b0" />
           </TouchableOpacity>
-        </View>
-
-        <View style={styles.memoList}>
-         <View style={styles.memoListItem}>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2023年3月14日 10:00</Text>
-          </View>
-          
-          <TouchableOpacity style={styles.buttom}>
-            <Entypo name="cross" size={24} color="#b0b0b0" />
-          </TouchableOpacity>
-        </View>
+        </TouchableOpacity>
     </View>
   );
 }
