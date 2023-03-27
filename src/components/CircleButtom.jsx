@@ -12,6 +12,7 @@ export default function CircleButtom(props) {
     );
 }
 
+
 CircleButtom.propTypes = {
     style: shape(),
     name: string.isRequired,

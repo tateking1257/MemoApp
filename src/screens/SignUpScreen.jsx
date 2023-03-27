@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 
 import Buttom from '../components/Buttom';
+import Info from '../components/Info';
 
 export default function SignUpScreen(props) {
     const { navigation } = props;
@@ -9,16 +10,15 @@ export default function SignUpScreen(props) {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <Text style={styles.title}>Sign up</Text>
-                <TextInput style={styles.input} value="email" />
-                <TextInput style={styles.input} value="pass" />
+                <Info />
                 <Buttom 
-                label='Submit' 
-                onPress={()=>{
-                    navigation.reset({
-                        index: 0,
-                        routes: [{ name: 'MemoList'}],
-                    });
-                }}
+                    label='Submit' 
+                    onPress={()=>{
+                        navigation.reset({
+                            index: 0,
+                            routes: [{ name: 'MemoList'}],
+                        });
+                    }}
                 />
                 <View style={styles.footContainer}>
                     <Text style={styles.footText}>Already registered?</Text>
@@ -52,15 +52,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         lineHeight: 32,
         marginBottom: 24,
-    },
-    input: {
-        fontSize: 16,
-        height: 48,
-        borderColor: '#dddddd',
-        borderweight: 1,
-        backgroundColor: '#ffffff',
-        paddingHorizontal: 8,
-        marginBottom: 16,
     },
     footContainer: {
         flexDirection: 'row',
